@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kr.co.tjoeun.a20191201_02_practice.datas.UserData
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,9 +32,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, UserInfoActivity::class.java)
-            intent.putExtra("userId", inputId)
-            intent.putExtra("userPw", inputPw)
-            intent.putExtra("userHeight", 10.5)
+
+            val loginUser = UserData()
+            loginUser.userLoginId = inputId
+            loginUser.userLoginPw = inputPw
+
+            intent.putExtra("userData", loginUser)
+
+//            intent.putExtra("userId", inputId)
+//            intent.putExtra("userPw", inputPw)
+//            intent.putExtra("userHeight", 10.5)
 
             startActivity(intent)
         }
