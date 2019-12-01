@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity() {
             if(inputId == "admin"){
                 if(inputPw == "123") {
                     Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, UserInfoActivity::class.java)
-                    startActivity(intent)
                 }
                 else{
                     Toast.makeText(this, "관리자 비번이 틀렸습니다", Toast.LENGTH_SHORT).show()
@@ -31,6 +29,13 @@ class MainActivity : AppCompatActivity() {
             else{
                 Toast.makeText( this, "일반사용자입니다",Toast.LENGTH_SHORT).show()
             }
+
+            val intent = Intent(this, UserInfoActivity::class.java)
+            intent.putExtra("userId", inputId)
+            intent.putExtra("userPw", inputPw)
+            intent.putExtra("userHeight", 10.5)
+
+            startActivity(intent)
         }
 
     }
