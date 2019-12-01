@@ -18,6 +18,7 @@
         android:textColor="#2d2d2d"/>
 
     <EditText
+        android:id="@+id/idEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="ID"
@@ -27,6 +28,7 @@
         android:layout_marginTop="30dp"/>
 
     <EditText
+        android:id="@+id/pwEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
@@ -34,6 +36,7 @@
         android:layout_marginTop="30dp"/>
 
     <Button
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="로그인"
