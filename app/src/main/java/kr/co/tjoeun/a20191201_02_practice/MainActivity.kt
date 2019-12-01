@@ -15,9 +15,15 @@ class MainActivity : AppCompatActivity() {
             var inputId = idEdt.text.toString()
             var inputPw = pwEdt.text.toString()
 
-            if(inputId == "admin" && inputPw == "123")
-            {
-                Toast.makeText( this, "관리자입니다",Toast.LENGTH_SHORT).show()
+//            id:admin => pw:pw123 관리자입니다 / 비번이 틀리면"관리자 비번이 틀렸습니다"
+
+            if(inputId == "admin"){
+                if(inputPw == "123") {
+                    Toast.makeText(this, "관리자입니다", Toast.LENGTH_SHORT).show()
+                }
+                else{
+                    Toast.makeText(this, "관리자 비번이 틀렸습니다", Toast.LENGTH_SHORT).show()
+                }
             }
             else{
                 Toast.makeText( this, "일반사용자입니다",Toast.LENGTH_SHORT).show()
